@@ -4,7 +4,7 @@ Ruby interface to MailDrop. MailDrop provides free disposable e-mail addresses.
 
 ## Installation 
 Add this line to your `Gemfile`:
-```
+``` ruby
 gem 'maildrop'
 ```
 
@@ -27,10 +27,10 @@ Emails can be accessed through `mailbox.emails` and have the following attribute
 ``` ruby
 email = mailbox.emails.first
 
-email.id            # unique ID assigned by MailDrop (string, example: "wsAGFt")
-email.sender        # sender email address (sting)
-email.subject       # email subject (string)
-email.date          # date received (DateTime object)
-email.body          # email body (string, either plaintext or HTML)
-email.mailbox_name  # name of the mailbox the email belongs to (string)
+email.id            # unique ID assigned by MailDrop (String, example: "wsAGFt")
+email.sender        # sender email address (String)
+email.subject       # email subject (String)
+email.date          # date received (DateTime)
+email.body          # email body (String, either plaintext or HTML)
+email.mailbox_name  # name of the mailbox the email belongs to (String)
 ```
