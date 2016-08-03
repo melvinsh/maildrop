@@ -1,4 +1,4 @@
-# maildrop
+# maildrop [![Travis CI](https://travis-ci.org/melvinsh/maildrop.svg)](https://travis-ci.org/melvinsh/maildrop) [![Coverage Status](https://coveralls.io/repos/github/melvinsh/maildrop/badge.svg?branch=master)](https://coveralls.io/github/melvinsh/maildrop?branch=master)
 
 Ruby interface to MailDrop. MailDrop provides free disposable e-mail addresses.
 
