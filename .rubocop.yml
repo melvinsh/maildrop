@@ -1,0 +1,10 @@
+AllCops:
+  TargetRubyVersion: 2.0
+  Excludes:
+    - maildrop.gemspec
+
+ClassAndModuleChildren:
+  Enabled: false
+
+Documentation: 
+  Enabled: false

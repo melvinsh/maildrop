@@ -1,0 +1,10 @@
+coverage
+coverage.data
+
+.bundle
+Gemfile.lock
+Gemfile.local
+*.gem
+
+.DS_Store
+*.swp
