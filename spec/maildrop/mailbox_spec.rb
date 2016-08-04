@@ -12,12 +12,4 @@ describe Maildrop::Mailbox do
     expect(mailbox).to be_instance_of(Maildrop::Models::Mailbox)
     expect(mailbox.name.size).to eq(12 * 2)
   end
-
-  it '#emails returns a list of emails' do
-    mailbox = Maildrop::Mailbox.get('test')
-    expect(mailbox.emails).to be_kind_of(Array)
-    expect(mailbox.emails.first).to be_kind_of(Maildrop::Models::Email)
-
-    # TODO: add tests (VCR) for an empty mailbox.
-  end
 end

@@ -23,7 +23,11 @@ You can also generate a random (12-character) name:
 ``` ruby
 mailbox = Maildrop::Mailbox.random_get
 ```
-Both return a `Maildrop::Models::Mailbox` object with a `name` attribute.
+Both return a `Maildrop::Models::Mailbox` object with the following attributes:
+``` ruby
+mailbox.name       # the name of the mailbox (String, example: example_name)
+mailbox.address    # the full email address of the mailbox (String, example: example_name@maildrop.cc)
+```
 
 ### Emails
 Emails can be accessed through `mailbox.emails` and have the following attributes:
