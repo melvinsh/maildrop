@@ -5,11 +5,18 @@ module Maildrop::Models
     def initialize(name, data)
       @name = name
       emails = JSON.parse(data)
-      @emails = emails.map do |email_data|
-        http = Maildrop::HTTP.new
-        response = http.get("#{name}/#{email_data['id']}")
-        Maildrop::Models::Email.new(JSON.parse(response))
+      @emails = emails.map do |email|
+        data = download_email(email['id'])
+        Maildrop::Models::Email.new(data)
       end
+    end
+
+    private
+
+    def download_email(id)
+      http = Maildrop::HTTP.new
+      response = http.get("#{@name}/#{id}")
+      JSON.parse(response)
     end
   end
 end
