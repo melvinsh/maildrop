@@ -1,5 +1,6 @@
+require 'json'
+require 'mail'
 require 'net/http'
-require 'nokogiri'
 require 'securerandom'
 
 require_relative 'maildrop/http'

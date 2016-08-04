@@ -30,10 +30,8 @@ Emails can be accessed through `mailbox.emails` and have the following attribute
 ``` ruby
 email = mailbox.emails.first
 
-email.id            # unique ID assigned by MailDrop (String, example: "wsAGFt")
 email.sender        # sender email address (String)
 email.subject       # email subject (String)
 email.date          # date received (DateTime)
 email.body          # email body (String, either plaintext or HTML)
-email.mailbox_name  # name of the mailbox the email belongs to (String)
 ```
