@@ -4,9 +4,11 @@ module Maildrop::Models
 
     def initialize(name, data)
       @name = name
-      emails = Nokogiri::HTML(data).css('tr').drop(1)
+      emails = JSON.parse(data)
       @emails = emails.map do |email_data|
-        Maildrop::Models::Email.new(name, email_data)
+        http = Maildrop::HTTP.new
+        response = http.get("#{name}/#{email_data['id']}")
+        Maildrop::Models::Email.new(JSON.parse(response))
       end
     end
   end

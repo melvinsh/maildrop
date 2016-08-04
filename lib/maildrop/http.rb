@@ -24,7 +24,7 @@ module Maildrop
     end
 
     def base_url
-      'http://maildrop.cc/inbox'
+      'http://maildrop.cc/api/inbox'
     end
 
     def handle_response(response)

@@ -10,8 +10,8 @@ describe Maildrop::Models::Email do
     expect(@email).to be_instance_of(Maildrop::Models::Email)
   end
 
-  it 'has an id that is a string' do
-    expect(@email.id).to be_instance_of(String)
+  it 'has a subject that is a string' do
+    expect(@email.sender).to be_instance_of(String)
   end
 
   it 'has a subject that is a string' do
@@ -19,7 +19,7 @@ describe Maildrop::Models::Email do
   end
 
   it 'has an body that is a string' do
-    expect(@email.body).to be_instance_of(String)
+    expect(@email.body).to be_instance_of(String).or be_nil
   end
 
   it 'has a date that is a DateTime object' do
