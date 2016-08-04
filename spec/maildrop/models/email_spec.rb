@@ -10,7 +10,7 @@ describe Maildrop::Models::Email do
     expect(@email).to be_instance_of(Maildrop::Models::Email)
   end
 
-  it 'has a subject that is a string' do
+  it 'has a sender that is a string' do
     expect(@email.sender).to be_instance_of(String)
   end
 

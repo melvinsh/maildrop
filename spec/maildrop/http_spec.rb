@@ -10,5 +10,7 @@ describe Maildrop::HTTP do
   it 'throws an error when something goes wrong' do
     http = Maildrop::HTTP.new
     expect { http.get('../404') }.to raise_error(Maildrop::HTTP::NotFound)
+
+    # TODO: expand for different errors.
   end
 end
