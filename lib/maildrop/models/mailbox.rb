@@ -11,6 +11,10 @@ module Maildrop::Models
       end
     end
 
+    def address
+      "#{name}@maildrop.cc"
+    end
+
     private
 
     def download_email(id)
