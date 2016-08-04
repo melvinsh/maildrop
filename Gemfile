@@ -2,8 +2,6 @@ source 'https://rubygems.org'
 
 gemspec
 
-gem 'mail', '~> 2.6', '>= 2.6.4'
-
 group :development do
   gem 'pry'
 end
