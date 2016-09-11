@@ -13,13 +13,7 @@ module Maildrop
       private
 
       def build_model(name)
-        data = download_mailbox(name)
-        Maildrop::Models::Mailbox.new(name, data)
-      end
-
-      def download_mailbox(name)
-        http = Maildrop::HTTP.new
-        http.get(name)
+        Maildrop::Models::Mailbox.new(name)
       end
     end
   end
