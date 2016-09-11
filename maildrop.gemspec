@@ -11,5 +11,6 @@ Gem::Specification.new do |s|
     'https://github.com/melvinsh/maildrop'
   s.license       = 'MIT'
   s.required_ruby_version = '>= 2.0.0'
-  s.add_runtime_dependency "mail", ['~> 2.6', '>= 2.6.4']
+  s.add_runtime_dependency 'mail', ['~> 2.6', '>= 2.6.4']
+  s.add_runtime_dependency 'http', ['~> 2.0', '>= 2.0.3']
 end

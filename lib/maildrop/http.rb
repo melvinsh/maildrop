@@ -4,33 +4,29 @@ module Maildrop
     class RequestError < StandardError; end
 
     def get(url)
-      handle_response(request(url))
+      response = request(url)
+      handle_response(response)
     end
 
     private
 
     def request(url)
-      uri = generate_url(url)
-      perform_request(uri)
-    end
-
-    def perform_request(uri)
-      http = Net::HTTP.new(uri.host, uri.port)
-      http.get(uri.request_uri)
+      url = generate_url(url)
+      ::HTTP.get(url)
     end
 
     def generate_url(url)
-      URI("#{base_url}/#{url}")
+      "#{base_url}/#{url}"
     end
 
     def base_url
-      'http://maildrop.cc/api/inbox'
+      'https://maildrop.cc/api/inbox'
     end
 
     def handle_response(response)
       case response.code.to_i
       when 200
-        response.body
+        response.to_s
       when 404
         raise NotFound
       else

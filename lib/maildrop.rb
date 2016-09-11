@@ -1,3 +1,4 @@
+require 'http'
 require 'json'
 require 'mail'
 require 'net/http'
