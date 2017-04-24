@@ -1,7 +1,7 @@
 Gem::Specification.new do |s|
   s.name        = 'maildrop'
-  s.version     = '0.1.1'
-  s.date        = '2016-09-11'
+  s.version     = '0.1.2'
+  s.date        = '2017-04-24'
   s.summary     = 'Ruby interface to MailDrop.'
   s.description = 'Ruby interface to MailDrop for quick, disposable mailboxes.'
   s.authors     = ['Melvin Lammerts']
@@ -12,5 +12,5 @@ Gem::Specification.new do |s|
   s.license       = 'MIT'
   s.required_ruby_version = '>= 2.0.0'
   s.add_runtime_dependency 'mail', ['~> 2.6', '>= 2.6.4']
-  s.add_runtime_dependency 'http', ['~> 2.0', '>= 2.0.3']
+  s.add_runtime_dependency 'http', ['~> 2.2', '>= 2.2.1']
 end

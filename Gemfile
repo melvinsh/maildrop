@@ -7,7 +7,7 @@ group :development do
 end
 
 group :test do
-  gem 'rspec', '~> 3.4'
-  gem 'simplecov', '~> 0.12.0'
   gem 'coveralls', require: false
+  gem 'rspec', '~> 3.5'
+  gem 'simplecov', '~> 0.14.1'
 end
